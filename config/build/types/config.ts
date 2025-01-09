@@ -4,6 +4,7 @@ interface BuildPaths {
   entry: string;
   build: string;
   html: string;
+  src: string;
 }
 
 type BuildMode = Pick<Configuration, "mode">["mode"];
