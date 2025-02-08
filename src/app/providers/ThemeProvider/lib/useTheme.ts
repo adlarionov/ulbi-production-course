@@ -1,12 +1,12 @@
-import { useContext } from "react";
-import { LOCAL_STORAGE_THEME_KEY, Theme, ThemeContext } from "./ThemeContext";
+import { useContext } from 'react';
+import { LOCAL_STORAGE_THEME_KEY, Theme, ThemeContext } from './ThemeContext';
 
 interface UseTheme {
-  toggleTheme: () => void;
-  theme: Theme;
+  toggleTheme: () => void
+  theme: Theme
 }
 
-export function useTheme(): UseTheme {
+export function useTheme (): UseTheme {
   const { theme, setTheme } = useContext(ThemeContext);
 
   const toggleTheme = () => {
@@ -18,6 +18,6 @@ export function useTheme(): UseTheme {
 
   return {
     theme,
-    toggleTheme,
+    toggleTheme
   };
 }

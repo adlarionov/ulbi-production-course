@@ -1,13 +1,13 @@
-import { FC, useState } from "react";
-import classes from "./styles.module.scss";
-import { classNames } from "@/shared/lib/classNames";
-import { Button } from "@/shared/ui/Button/Button";
-import { ThemeSwitcher } from "@/widgets/ThemeSwitcher";
-import { LanguageSwitcher } from "@/widgets/LanguageSwitcher";
-import { useTranslation } from "react-i18next";
+import { type FC, useState } from 'react';
+import classes from './styles.module.scss';
+import { classNames } from '@/shared/lib/classNames';
+import { Button } from '@/shared/ui/Button/Button';
+import { ThemeSwitcher } from '@/widgets/ThemeSwitcher';
+import { LanguageSwitcher } from '@/widgets/LanguageSwitcher';
+import { useTranslation } from 'react-i18next';
 
 interface SidebarProps {
-  className?: string;
+  className?: string
 }
 
 export const Sidebar: FC<SidebarProps> = ({ className }) => {
@@ -30,7 +30,7 @@ export const Sidebar: FC<SidebarProps> = ({ className }) => {
         <ThemeSwitcher />
         <LanguageSwitcher />
       </div>
-      <Button onClick={handleToggle}>{t("Скрыть")}</Button>
+      <Button onClick={handleToggle}>{t('Скрыть')}</Button>
     </div>
   );
 };

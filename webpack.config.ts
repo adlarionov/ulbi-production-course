@@ -1,20 +1,20 @@
-import path from "path";
-import { buildWebpackConfig } from "./config/build/buildWebpackConfig";
-import { EnvVariables } from "./config/build/types/config";
+import path from 'path';
+import { buildWebpackConfig } from './config/build/buildWebpackConfig';
+import { type EnvVariables } from './config/build/types/config';
 
 export default (env: EnvVariables) => {
-  const isDevelopment = env.mode === "development";
+  const isDevelopment = env.mode === 'development';
   const port = env.port ?? 3000;
 
   return buildWebpackConfig({
-    mode: isDevelopment ? "development" : "production",
+    mode: isDevelopment ? 'development' : 'production',
     paths: {
-      entry: path.resolve(__dirname, "src", "index.tsx"),
-      build: path.resolve(__dirname, "dist"),
-      html: path.resolve(__dirname, "public", "index.html"),
-      src: path.resolve(__dirname, "src"),
+      entry: path.resolve(__dirname, 'src', 'index.tsx'),
+      build: path.resolve(__dirname, 'dist'),
+      html: path.resolve(__dirname, 'public', 'index.html'),
+      src: path.resolve(__dirname, 'src')
     },
     isDev: isDevelopment,
-    port,
+    port
   });
 };

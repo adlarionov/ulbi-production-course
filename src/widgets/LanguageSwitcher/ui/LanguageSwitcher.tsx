@@ -1,11 +1,11 @@
-import { FC } from "react";
-import classes from "./styles.module.scss";
-import { classNames } from "@/shared/lib/classNames";
-import { useTranslation } from "react-i18next";
-import { Button, ThemeButton } from "@/shared/ui/Button/Button";
+import { type FC } from 'react';
+import classes from './styles.module.scss';
+import { classNames } from '@/shared/lib/classNames';
+import { useTranslation } from 'react-i18next';
+import { Button, ThemeButton } from '@/shared/ui/Button/Button';
 
 interface LanguageSwitcherProps {
-  className?: string;
+  className?: string
 }
 
 export const LanguageSwitcher: FC<LanguageSwitcherProps> = ({ className }) => {
@@ -13,7 +13,7 @@ export const LanguageSwitcher: FC<LanguageSwitcherProps> = ({ className }) => {
 
   const toggleLanguage = () => {
     const { changeLanguage, language } = i18n;
-    changeLanguage(language === "ru" ? "en" : "ru");
+    changeLanguage(language === 'ru' ? 'en' : 'ru');
   };
 
   return (
@@ -22,7 +22,7 @@ export const LanguageSwitcher: FC<LanguageSwitcherProps> = ({ className }) => {
       onClick={toggleLanguage}
       className={classNames(classes.languageSwitcher, {}, [className])}
     >
-      {t("Язык")}
+      {t('Язык')}
     </Button>
   );
 };

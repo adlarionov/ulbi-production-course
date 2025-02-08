@@ -1,22 +1,22 @@
-import { Configuration } from "webpack";
+import { type Configuration } from 'webpack';
 
 interface BuildPaths {
-  entry: string;
-  build: string;
-  html: string;
-  src: string;
+  entry: string
+  build: string
+  html: string
+  src: string
 }
 
-type BuildMode = Pick<Configuration, "mode">["mode"];
+type BuildMode = Pick<Configuration, 'mode'>['mode']
 
 export interface BuildOptions {
-  mode: BuildMode;
-  paths: BuildPaths;
-  isDev: boolean;
-  port: number;
+  mode: BuildMode
+  paths: BuildPaths
+  isDev: boolean
+  port: number
 }
 
 export interface EnvVariables {
-  port: number;
-  mode: BuildMode;
+  port: number
+  mode: BuildMode
 }
